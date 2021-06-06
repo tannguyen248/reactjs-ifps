@@ -13,12 +13,20 @@ const Layer = (props) => {
   }, [ref.current]);
 
   return (
-    <div className={styles.layer}>
-      <div ref={ref} style={{ height: 200, width: 200 }}>
-        {props.children}
+    <>
+      <div
+        className={styles.layer}
+        id={props.id}
+        ref={ref}
+        data-x="0"
+        data-y="0"
+      >
+        <div style={{ height: props.height, width: props.width }}>
+          {props.children}
+        </div>
       </div>
       {isRendered && <Movable elementRef={ref} />}
-    </div>
+    </>
   );
 };
 

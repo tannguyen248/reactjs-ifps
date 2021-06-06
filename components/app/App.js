@@ -2,11 +2,12 @@ import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Typography from "@material-ui/core/Typography";
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "../Sidebar";
 import Editor from "../Editor";
+import { EditorProvider } from "../context/EditorProvider";
 
-const App = ({ images }) => {
+const AppView = ({ images }) => {
   return (
     <React.Fragment>
       <CssBaseline />
@@ -21,6 +22,14 @@ const App = ({ images }) => {
         </Grid>
       </Container>
     </React.Fragment>
+  );
+};
+
+const App = ({ images }) => {
+  return (
+    <EditorProvider>
+      <AppView images={images} />
+    </EditorProvider>
   );
 };
 
