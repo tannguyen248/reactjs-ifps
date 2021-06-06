@@ -1,0 +1,18 @@
+.container {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.editor {
+  width: 640px;
+  height: 640px;
+  box-shadow: 0 2px 8px rgb(14 19 24 / 7%);
+  background-color: #ffffff;
+}
+
+.layer {
+  position: absolute;
+}
