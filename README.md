@@ -1,6 +1,6 @@
 # React + IPFS
 
-> A qyuick example created by Tan Nguyen. In this demo, you will see how to using React as FE and express api + IPFS as BE
+> A quick example created by Tan Nguyen. In this demo, you will see how to using React as FE and express api + IPFS as BE
 
 ## Creator
 
@@ -20,7 +20,7 @@
 
 ## Concept
 
-You can using IPFS directly on FE, but I don't think it's a good idea. With IPFS + Express API, you can easilly address future problems that you might be facing with IPFS. In my view, IPFS is the future and it can combine with API to become a new development stack
+You can using IPFS directly on FE, but I don't think it's a good idea. With IPFS + Express API, you can easily address future problems that you might be facing with IPFS. In my view, IPFS is the future and it can combine with API to become a new development stack
 
 ## POC
 
