@@ -1,6 +1,6 @@
 # React + IPFS
 
-> A quick example created by Tan Nguyen. In this demo, you will see how to using React as FE and express api + IPFS as BE
+> A quick example created by Tan Nguyen. In this demo, you will see how to use React as FE and express API + IPFS as BE
 
 ## Creator
 
