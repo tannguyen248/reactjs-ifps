@@ -13,10 +13,10 @@ const AppView = ({ images }) => {
       <CssBaseline />
       <Container disableGutters maxWidth="xl">
         <Grid container>
-          <Grid item xs={4}>
+          <Grid item xs={3}>
             <Sidebar images={images} />
           </Grid>
-          <Grid item xs={8}>
+          <Grid item xs={9}>
             <Editor />
           </Grid>
         </Grid>

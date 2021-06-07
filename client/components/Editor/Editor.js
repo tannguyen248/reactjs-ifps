@@ -1,29 +1,24 @@
 import React, { useContext } from "react";
 import styles from "./Editor.module.scss";
-import { toJpeg } from "html-to-image";
+import { toBlob } from "html-to-image";
 import Button from "@material-ui/core/Button";
 import PublishIcon from "@material-ui/icons/Publish";
 import { EditorContext } from "../context/EditorProvider";
 import LayerImage from "./LayerImage";
+import { captureImage, uploadToServer } from "../../helper/func";
+
+const filterMoveable = (node) => !node.classList.contains("moveable-line");
 
 const Editor = () => {
   const { state } = useContext(EditorContext);
 
-  const handlePublish = () => {
+  const handlePublish = async () => {
     var node = document.getElementById("editor");
 
-    toJpeg(node, {
-      filter: (node) => !node.classList.contains("moveable-line"),
-    })
-      .then(function (dataUrl) {
-        var link = document.createElement("a");
-        link.download = "my-image-name.jpeg";
-        link.href = dataUrl;
-        link.click();
-      })
-      .catch(function (error) {
-        console.error("oops, something went wrong!", error);
-      });
+    const formData = await captureImage(node, filterMoveable);
+    const result = await uploadToServer(formData);
+
+    console.log({ result });
   };
 
   return (
