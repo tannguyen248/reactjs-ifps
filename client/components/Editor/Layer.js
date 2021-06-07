@@ -18,8 +18,8 @@ const Layer = (props) => {
         className={styles.layer}
         id={props.id}
         ref={ref}
-        data-x="0"
-        data-y="0"
+        data-translatex="0"
+        data-translatey="0"
       >
         <div style={{ height: props.height, width: props.width }}>
           {props.children}
